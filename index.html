@@ -1,0 +1,186 @@
+<div id="dp-wrapper-pillars" class="dp-wrapper dp-basic-bar variation-2" style="background-color: #1e2229; color: #ffffff; padding: 24px; border-radius: 12px; max-width: 900px; margin: 0 auto; font-family: system-ui, sans-serif; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border: 1px solid #323842;">
+    <header class="dp-header" style="background: linear-gradient(135deg, #1c8a24, #0f4d14); padding: 22px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(28, 138, 36, 0.4);">
+        <h2 style="margin: 0; font-size: 26px; color: #ffffff; font-weight: 800; display: flex; align-items: center; gap: 10px;">
+            <span>🏛️</span> The Three Pillars of Film Genre: Architecture Arena
+        </h2>
+        <p style="margin: 8px 0 0 0; color: #e1ffe3; font-weight: 600; font-size: 14px;">Drag each foundational genre card into its proper structural pillar zone!</p>
+    </header>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; background-color: #272c35; padding: 14px 22px; border-radius: 8px; margin-bottom: 20px; font-weight: bold; border-left: 6px solid #1c8a24; box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);">
+        <div style="font-size: 16px;">Score: <span id="pillar-score" style="color: #55ff66; font-size: 18px;">0</span> / 3</div>
+        <div id="pillar-badge" style="background-color: #323842; padding: 4px 12px; border-radius: 20px; font-size: 13px; color: #ffb703;">Foundation Ready 🏗️</div>
+        <div style="font-size: 16px;">Streak: 🔥 <span id="pillar-streak" style="color: #ff9f43; font-size: 18px;">0</span></div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 20px;">
+        <div class="pillar-zone" data-category="plot" style="background-color: #272c35; border: 2px dashed #3e4653; border-radius: 8px; padding: 18px; min-height: 170px; transition: all 0.3s ease;">
+            <h3 style="margin-top: 0; color: #55ff66; font-size: 16px; border-bottom: 2px solid #3e4653; padding-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                <span>📖</span> Plot &amp; Narrative Structure
+            </h3>
+            <div class="zone-items" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;"></div>
+        </div>
+        <div class="pillar-zone" data-category="aesthetics" style="background-color: #272c35; border: 2px dashed #3e4653; border-radius: 8px; padding: 18px; min-height: 170px; transition: all 0.3s ease;">
+            <h3 style="margin-top: 0; color: #55ff66; font-size: 16px; border-bottom: 2px solid #3e4653; padding-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                <span>🎨</span> Aesthetics &amp; Presentation
+            </h3>
+            <div class="zone-items" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;"></div>
+        </div>
+        <div class="pillar-zone" data-category="emotion" style="background-color: #272c35; border: 2px dashed #3e4653; border-radius: 8px; padding: 18px; min-height: 170px; transition: all 0.3s ease;">
+            <h3 style="margin-top: 0; color: #55ff66; font-size: 16px; border-bottom: 2px solid #3e4653; padding-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                <span>❤️</span> Emotional Response
+            </h3>
+            <div class="zone-items" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;"></div>
+        </div>
+    </div>
+
+    <div style="background-color: #272c35; padding: 18px; border-radius: 8px; border-top: 4px solid #1c8a24; box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);">
+        <h3 style="margin-top: 0; color: #ffffff; font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+            <span>🎟️</span> Pillar Element Card Bank <span style="font-size: 12px; color: #8b949e; font-weight: normal;">(Drag cards upward)</span>
+        </h3>
+        <div id="pillar-bank" style="display: flex; flex-wrap: wrap; gap: 12px; min-height: 90px;">
+            <div class="pillar-card" draggable="true" id="pcard-1" data-category="plot" style="background-color: #323842; border: 1px solid #485263; border-radius: 8px; padding: 12px; cursor: grab; display: flex; align-items: center; gap: 12px; width: calc(50% - 6px); box-sizing: border-box; transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=80&q=80" alt="Plot" style="width: 38px; height: 38px; border-radius: 6px; object-fit: cover;">
+                <span style="font-size: 13px; font-weight: 600; line-height: 1.4;">Crimes, investigations &amp; dramatic reveals</span>
+            </div>
+            <div class="pillar-card" draggable="true" id="pcard-2" data-category="aesthetics" style="background-color: #323842; border: 1px solid #485263; border-radius: 8px; padding: 12px; cursor: grab; display: flex; align-items: center; gap: 12px; width: calc(50% - 6px); box-sizing: border-box; transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=80&q=80" alt="Aesthetics" style="width: 38px; height: 38px; border-radius: 6px; object-fit: cover;">
+                <span style="font-size: 13px; font-weight: 600; line-height: 1.4;">Lighting design, costumes &amp; musical scores</span>
+            </div>
+            <div class="pillar-card" draggable="true" id="pcard-3" data-category="emotion" style="background-color: #323842; border: 1px solid #485263; border-radius: 8px; padding: 12px; cursor: grab; display: flex; align-items: center; gap: 12px; width: calc(100% - 0px); box-sizing: border-box; transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=80&q=80" alt="Emotion" style="width: 38px; height: 38px; border-radius: 6px; object-fit: cover;">
+                <span style="font-size: 13px; font-weight: 600; line-height: 1.4;">Eliciting laughter, amusement, shock, or fear</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="pillar-feedback" style="margin-top: 16px; padding: 14px; border-radius: 8px; text-align: center; font-weight: bold; display: none; font-size: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);"></div>
+    <button id="pillar-reset" style="background-color: #1c8a24; color: #ffffff; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 16px; display: none; width: 100%; font-size: 16px; box-shadow: 0 4px 12px rgba(28, 138, 36, 0.4); transition: background-color 0.2s;">🔄 Play Again &amp; Rebuild Architecture</button>
+</div>
+
+<script>
+    const pCards = document.querySelectorAll('.pillar-card');
+    const pZones = document.querySelectorAll('.pillar-zone');
+    const pScoreEl = document.getElementById('pillar-score');
+    const pStreakEl = document.getElementById('pillar-streak');
+    const pBadge = document.getElementById('pillar-badge');
+    const pFeedback = document.getElementById('pillar-feedback');
+    const pResetBtn = document.getElementById('pillar-reset');
+    const pBank = document.getElementById('pillar-bank');
+
+    let pScore = 0;
+    let pStreak = 0;
+
+    pCards.forEach(card => {
+        card.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', card.id);
+            card.style.opacity = '0.4';
+        });
+        card.addEventListener('dragend', () => {
+            card.style.opacity = '1';
+        });
+        card.addEventListener('mouseenter', () => {
+            if(card.getAttribute('draggable') === 'true') {
+                card.style.transform = 'translateY(-2px)';
+                card.style.backgroundColor = '#3b434f';
+                card.style.boxShadow = '0 6px 12px rgba(0,0,0,0.4)';
+            }
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.backgroundColor = '#323842';
+            card.style.boxShadow = '0 4px 6px rgba(0,0,0,0.3)';
+        });
+    });
+
+    pZones.forEach(zone => {
+        zone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            zone.style.borderColor = '#55ff66';
+            zone.style.backgroundColor = '#2d333e';
+        });
+        zone.addEventListener('dragleave', () => {
+            zone.style.borderColor = '#3e4653';
+            zone.style.backgroundColor = '#272c35';
+        });
+        zone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            zone.style.borderColor = '#3e4653';
+            zone.style.backgroundColor = '#272c35';
+
+            const cardId = e.dataTransfer.getData('text/plain');
+            const card = document.getElementById(cardId);
+            if (!card) return;
+
+            if (zone.dataset.category === card.dataset.category) {
+                zone.querySelector('.zone-items').appendChild(card);
+                card.setAttribute('draggable', 'false');
+                card.style.cursor = 'default';
+                card.style.width = '100%';
+                card.style.transform = 'none';
+                card.style.boxShadow = 'none';
+                card.style.backgroundColor = '#213028';
+                card.style.border = '1px solid #1c8a24';
+                
+                pScore++;
+                pStreak++;
+                pScoreEl.textContent = pScore;
+                pStreakEl.textContent = pStreak;
+
+                if (pStreak === 1) {
+                    pBadge.textContent = "🏛️ Solid Base!";
+                    pBadge.style.color = "#55ff66";
+                } else if (pStreak === 2) {
+                    pBadge.textContent = "⚡ Strong Pillars!";
+                    pBadge.style.color = "#ff9f43";
+                } else if (pStreak === 3) {
+                    pBadge.textContent = "🏆 Master Architect!";
+                    pBadge.style.color = "#ffd700";
+                }
+
+                if (pScore === 3) {
+                    pFeedback.innerHTML = "🎉 <strong>Architecture Complete!</strong> You successfully assembled the Three Pillars of Film Genre!";
+                    pFeedback.style.backgroundColor = "rgba(28, 138, 36, 0.25)";
+                    pFeedback.style.border = "1px solid #1c8a24";
+                    pFeedback.style.color = "#55ff66";
+                    pFeedback.style.display = 'block';
+                    pResetBtn.style.display = 'block';
+                }
+            } else {
+                pStreak = 0;
+                pStreakEl.textContent = pStreak;
+                pBadge.textContent = "❌ Structural Flaw!";
+                pBadge.style.color = "#ff6b6b";
+                
+                pFeedback.innerHTML = "💥 <strong>Wrong Pillar!</strong> That element doesn't belong in this structural zone. Try again!";
+                pFeedback.style.backgroundColor = "rgba(255, 107, 107, 0.15)";
+                pFeedback.style.border = "1px solid #ff6b6b";
+                pFeedback.style.color = "#ff6b6b";
+                pFeedback.style.display = 'block';
+                setTimeout(() => { 
+                    pFeedback.style.display = 'none'; 
+                    if(pStreak === 0) pBadge.textContent = "Foundation Ready 🏗️";
+                }, 2200);
+            }
+        });
+    });
+
+    pResetBtn.addEventListener('click', () => {
+        pScore = 0;
+        pStreak = 0;
+        pScoreEl.textContent = pScore;
+        pStreakEl.textContent = pStreak;
+        pBadge.textContent = "Foundation Ready 🏗️";
+        pBadge.style.color = "#ffb703";
+        pFeedback.style.display = 'none';
+        pResetBtn.style.display = 'none';
+        pCards.forEach(card => {
+            card.setAttribute('draggable', 'true');
+            card.style.cursor = 'grab';
+            card.style.width = card.dataset.category === 'emotion' ? '100%' : 'calc(50% - 6px)';
+            card.style.backgroundColor = '#323842';
+            card.style.border = '1px solid #485263';
+            card.style.boxShadow = '0 4px 6px rgba(0,0,0,0.3)';
+            pBank.appendChild(card);
+        });
+    });
+</script>
